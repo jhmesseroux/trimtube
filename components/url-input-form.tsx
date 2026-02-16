@@ -41,10 +41,10 @@ export function UrlInputForm({ onSubmit, isLoading }: UrlInputFormProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
     >
-      <div className="glass-card rounded-2xl p-2">
+      <div className="rounded-2xl border border-gray-200 bg-white p-2 shadow-xl dark:border-white/10 dark:bg-white/5 dark:backdrop-blur-xl">
         <div className="flex flex-col gap-2 sm:flex-row">
           <div className="relative flex-1">
-            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
             <Input
               type="text"
               placeholder="Paste YouTube URL here..."
@@ -53,14 +53,14 @@ export function UrlInputForm({ onSubmit, isLoading }: UrlInputFormProps) {
                 setUrl(e.target.value)
                 setError("")
               }}
-              className="h-14 rounded-xl border-0 bg-transparent pl-12 text-base placeholder:text-muted-foreground/70 focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="h-14 rounded-xl border-gray-200 bg-gray-50 pl-12 text-base placeholder:text-gray-400 focus-visible:ring-violet-500 dark:border-white/10 dark:bg-white/5 dark:placeholder:text-gray-500"
               disabled={isLoading}
             />
           </div>
           <Button
             type="submit"
             size="lg"
-            className="h-14 rounded-xl px-8 gradient-bg-vibrant hover:opacity-90 transition-opacity glow text-white border-0"
+            className="h-14 rounded-xl bg-gradient-to-r from-violet-600 via-fuchsia-500 to-pink-500 px-8 text-white shadow-lg shadow-violet-500/25 transition-all hover:shadow-xl hover:shadow-violet-500/30 hover:opacity-90"
             disabled={isLoading}
           >
             {isLoading ? (
@@ -82,7 +82,7 @@ export function UrlInputForm({ onSubmit, isLoading }: UrlInputFormProps) {
         <motion.p
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-3 text-center text-sm text-destructive"
+          className="mt-3 text-center text-sm text-red-500"
         >
           {error}
         </motion.p>

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Scissors, Sparkles } from "lucide-react"
+import { Sparkles } from "lucide-react"
 
 interface HeroSectionProps {
   children?: React.ReactNode
@@ -66,21 +66,11 @@ export function HeroSection({ children }: HeroSectionProps) {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-4xl text-center"
         >
-          {/* Icon */}
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-violet-600 via-fuchsia-500 to-pink-500 shadow-2xl shadow-violet-500/30"
-          >
-            <Scissors className="h-12 w-12 text-white" />
-          </motion.div>
-
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-5 py-2.5 text-sm font-medium text-violet-600 dark:text-violet-400"
           >
             <Sparkles className="h-4 w-4" />
@@ -91,7 +81,7 @@ export function HeroSection({ children }: HeroSectionProps) {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.3 }}
             className="mb-6 text-5xl font-extrabold tracking-tight md:text-6xl lg:text-7xl"
           >
             Trim YouTube Videos{" "}
@@ -104,7 +94,7 @@ export function HeroSection({ children }: HeroSectionProps) {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.4 }}
             className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
             Cut any segment from YouTube videos. Choose your preferred format and
@@ -116,7 +106,7 @@ export function HeroSection({ children }: HeroSectionProps) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.5 }}
             >
               {children}
             </motion.div>
